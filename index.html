@@ -13,35 +13,88 @@
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <div id="discover">
-      <a href="">discover<i data-feather="search"></i></a>
-    </div>
-    <main>
-      <h1>Travel Blog––</h1>
-      <br />
-      <br />
-      <h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, quia sed
-        iste fugiat voluptate tenetur nesciunt adipisci harum accusantium quasi
-        sapiente minima vitae magnam cupiditate perspiciatis voluptas ab dolorem
-        odio?
-      </h2>
-    </main>
-    <aside>
-      <nav>
-        <div id="menu">
-          <a href=""><i data-feather="x"></i></a>
+    <main id="mainWrapper">
+      <header id="navigationHeader">
+        <div>
+          <a href="">discover</a>
         </div>
+        <button id="buttonShowMenu"><i data-feather="menu"></i></button>
+      </header>
+      <section id="intro">
+        <h1>Travel Blog––</h1>
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, quia
+          sed iste fugiat voluptate tenetur nesciunt adipisci harum accusantium
+          quasi sapiente minima vitae magnam cupiditate perspiciatis voluptas ab
+          dolorem odio? Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Sequi modi porro cumque necessitatibus consectetur quaerat
+          blanditiis est odio recusandae nam deserunt omnis quisquam dolorum ad
+          labore nisi molestias, eum soluta.
+        </h2>
+      </section>
+      <section>
+        <div id="divider1" class="sectionDivider"></div>
+        <div id="dividerTitle" class="sectionDividerTitle">
+          <p>discover destinations</p>
+        </div>
+        <div id="divider2" class="sectionDivider"></div>
+      </section>
+      <section id="sectionContent">
+        <div id="marrakech" class="contentItemAll">
+          <a href="http://127.0.0.1:5500/travel-blog/marocco.html"
+            ><img
+              id="imgHigh"
+              src="http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-closeup.jpg"
+              alt="Boucharouite closeup"
+          /></a>
+          <a href="http://127.0.0.1:5500/travel-blog/marocco.html"
+            ><h1>Marrakech–– most beautiful traditional way of Upcycling</h1></a
+          >
 
-        <ul>
-          <div>menu</div>
-          <li><a href="">about</a></li>
+          <p class="country">
+            <a href="http://127.0.0.1:5500/travel-blog/marocco.html">Marocco</a>
+          </p>
+          <p class="date">march 2018</p>
+          <div id="divider3" class="sectionDivider"></div>
+        </div>
+        <div id="paris" class="contentItemAll">
+          <a href=""
+            ><img
+              id="imgHigh"
+              src="http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-bistro-detail.jpg"
+              alt="Bistro detail"
+          /></a>
+
+          <a href=""><h1>Paris–– colorful patters at Paris Deco Off</h1></a>
+
+          <p class="country"><a href="">France</a></p>
+          <p class="date">january 2019</p>
+          <div id="divider4" class="sectionDivider"></div>
+        </div>
+      </section>
+    </main>
+    <aside id="aside" class="hidden">
+      <header id="asideHeader">
+        <div id="menu">
+          <p>menu</p>
+        </div>
+        <button id="buttonHideMenu"><i data-feather="x"></i></button>
+      </header>
+      <nav>
+        <ul id="asideMenu">
+          <li>
+            <a href="http://127.0.0.1:5500/travel-blog/index.html">home</a>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5500/travel-blog/about.html">about</a>
+          </li>
           <li><a href="">add</a></li>
         </ul>
       </nav>
     </aside>
     <script>
       feather.replace();
+      src = "./js/main.js";
     </script>
   </body>
 </html>
