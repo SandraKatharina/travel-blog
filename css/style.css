@@ -23,8 +23,9 @@ a {
 }
 
 #buttonShowMenu {
-  /* background-color: transparent; */
+  background-color: transparent;
   border-style: none;
+  cursor: pointer;
 }
 
 #intro {
@@ -96,11 +97,11 @@ h2 {
   height: 100vh;
   background-color: darkgreen;
   position: fixed;
-  right: -370px;
+  right: 0px;
 }
 
 #aside.hidden {
-  right: 0;
+  right: -370px;
 }
 #asideHeader {
   display: flex;
@@ -115,8 +116,9 @@ h2 {
 
 #buttonHideMenu {
   z-index: 50;
-  /* background-color: darkgreen;
-  border-style: none; */
+  background-color: darkgreen;
+  border-style: none;
+  cursor: pointer;
 }
 
 #asideMenu {
