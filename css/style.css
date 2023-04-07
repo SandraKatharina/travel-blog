@@ -70,8 +70,8 @@ h2 {
 #divider2 {
   margin-top: 10px;
 }
-
-.contentItemAll {
+/* content with images replace by js */
+/* .contentItemAll {
   width: 80vw;
 }
 
@@ -90,7 +90,9 @@ h2 {
 
 #imgHigh {
   width: 80vw;
-}
+} */
+
+/* aside menu */
 
 #aside {
   width: 400px;
