@@ -18,7 +18,9 @@
         <div>
           <a href="">discover</a>
         </div>
-        <button id="buttonShowMenu"><i data-feather="menu"></i></button>
+        <button id="buttonShowMenu" class="menuButton">
+          <i data-feather="menu"></i>
+        </button>
       </header>
       <section id="intro">
         <h1>Travel Blog––</h1>
@@ -40,6 +42,48 @@
         <div id="divider2" class="sectionDivider"></div>
       </section>
       <div class="destinationContainer"></div>
+      <section>
+        <form>
+          <input
+            type="text"
+            placeholder="Image Source"
+            id="imageInput"
+            class="inputField"
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="City"
+            id="inputCity"
+            class="inputField"
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Title"
+            id="inputTitle"
+            class="inputField"
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Country"
+            id="inputCountry"
+            class="inputField"
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Date"
+            id="inputDate"
+            class="inputField"
+          />
+          <br />
+          <button type="button" id="addButton" class="button">
+            add a new destination
+          </button>
+        </form>
+      </section>
       <!-- <section id="sectionContent">
         <div id="marrakech" class="contentItemAll">
           <a href="http://127.0.0.1:5500/travel-blog/marocco.html"
@@ -79,7 +123,9 @@
         <div id="menu">
           <p>menu</p>
         </div>
-        <button id="buttonHideMenu"><i data-feather="x"></i></button>
+        <button id="buttonHideMenu" class="menuButton">
+          <i data-feather="x"></i>
+        </button>
       </header>
       <nav>
         <ul id="asideMenu">

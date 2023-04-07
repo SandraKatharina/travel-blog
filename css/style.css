@@ -22,7 +22,7 @@ a {
   color: darkgreen;
 }
 
-#buttonShowMenu {
+.menuButton {
   background-color: transparent;
   border-style: none;
   cursor: pointer;
@@ -70,11 +70,22 @@ h2 {
 #divider2 {
   margin-top: 10px;
 }
-/* content with images replace by js */
-/* .contentItemAll {
-  width: 80vw;
-}
 
+/* COMES FROM JS */
+
+.destinationContainer {
+  margin: 40px auto;
+}
+.destination {
+  width: 80vw;
+  margin: 20px auto;
+}
+.destination img {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  object-fit: cover;
+}
 .country {
   margin-top: 14px;
   text-align: end;
@@ -88,9 +99,7 @@ h2 {
   font-family: futura-book;
 }
 
-#imgHigh {
-  width: 80vw;
-} */
+/* INPUT FORM */
 
 /* aside menu */
 
@@ -119,8 +128,6 @@ h2 {
 #buttonHideMenu {
   z-index: 50;
   background-color: darkgreen;
-  border-style: none;
-  cursor: pointer;
 }
 
 #asideMenu {
@@ -160,6 +167,24 @@ h2 {
     margin-top: 30px;
     width: 80vw;
   }
+  /* COMES FROM JS */
+  .destinationContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+  }
+  .destination {
+    width: 39vw;
+  }
+  .destination img {
+    display: block;
+    margin: 0 auto;
+    width: 39vw;
+    object-fit: cover;
+  }
+
+  /* IMPACTS MAROCCO.HTML  */
+
   #dividermarocco1 {
     margin-top: 30px;
     width: 80vw;
@@ -190,6 +215,8 @@ h2 {
   .floatLeft {
     float: left;
   }
+
+  /* ASIDE */
 
   #asideHeader {
     display: flex;
