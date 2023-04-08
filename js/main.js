@@ -42,7 +42,7 @@ addButton.addEventListener("click", function () {
     country: inputCountry.value,
     date: inputDate.value,
   };
-  //   console.log(newDestination);
+  console.log(newDestination);
   destinations.push(newDestination);
   saveToLocalStorage();
 });
@@ -75,17 +75,26 @@ destinationContainer.innerHTML = destinations
 // function filldestinationContainer() {
 //   const destinationContainer = document.querySelector(".destinationContainer");
 
-// //   destinationContainer.innerHtml = "";
+//   destinationContainer.innerHtml = "";
 //   for (let i = 0; i < destinations.length; i++) {
-//     const newDestination = `
-//         <div class="destination">
-//             <img src="${destinations[i].imageSrc}">
-//             <h1>"${destinations[i].titel}"</h1>
-//             <p>"${destinations[i].country}"</p>
-//             <p>"${destinations[i].date}"</p>
-//         </div>`;
-//     // console.log(newDestination);
-//     destinationContainer.innerHtml = newDestination;
+//     const newDestination = `<div class="destination">
+//     <a href=${destinations[i].link}
+//     ><img
+//       id="imgHigh"
+//       src=${destinations[i].imageSrc}
+//       alt="Boucharouite closeup"
+//   /></a>
+//     <a href=${destinations[i].link}
+//     ><h1>${destinations[i].titel}</h1></a
+//   >
+//     <p class="country">
+//     <a href=${destinations[i].link}>${destinations[i].country}</a>
+//   </p>
+//     <p class="date">${destinations[i].date}</p>
+//     <div id="divider" class="sectionDivider"></div>
+//     </div>`;
+//     console.log(newDestination);
+//     destinationContainer.innerHtml += newDestination;
 //   }
 // }
 // filldestinationContainer();
@@ -103,3 +112,38 @@ function loadFromLocalStorage() {
 }
 
 loadFromLocalStorage();
+
+// const localWeather = document.querySelector(".weatherApi");
+// fetch(
+//   "https://api.openweathermap.org/data/2.5/weather?q=Paris,FR&appid={4d52d38088073627a3b3628993c298c0}"
+// )
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//     localWeather.innerHTML = data.results
+//       .map((location) => `<li>${location.q}</li>`)
+//       .join("");
+//   });
+
+// function weatherBalloon(cityID) {
+//   var key = "{4d52d38088073627a3b3628993c298c0}";
+//   fetch(
+//     "https://api.openweathermap.org/data/2.5/weather?id=" +
+//       cityID +
+//       "&appid=" +
+//       key
+//   )
+//     .then(function (resp) {
+//       return resp.json();
+//     }) // Convert data to json
+//     .then(function (data) {
+//       console.log(data);
+//     })
+//     .catch(function () {
+//       // catch any errors
+//     });
+// }
+
+// window.onload = function () {
+//   weatherBalloon(6167865);
+// };
