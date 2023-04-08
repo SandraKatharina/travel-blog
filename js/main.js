@@ -37,13 +37,14 @@ let destinations = [
 addButton.addEventListener("click", function () {
   const newDestination = {
     imageSrc: imageInput.value,
-    location: inputCity.value,
     titel: inputTitle.value,
+    location: inputCity.value,
     country: inputCountry.value,
     date: inputDate.value,
   };
-  console.log(newDestination);
+  //   console.log(newDestination);
   destinations.push(newDestination);
+  saveToLocalStorage();
 });
 
 // Functions
@@ -53,19 +54,19 @@ const destinationContainer = document.querySelector(".destinationContainer");
 destinationContainer.innerHTML = destinations
   .map(
     (destinations) => ` <div class="destination">
-        <a href="${destinations.link}"
+        <a href=${destinations.link}
         ><img
           id="imgHigh"
-          src="${destinations.imageSrc}"
+          src=${destinations.imageSrc}
           alt="Boucharouite closeup"
       /></a>
-        <a href="${destinations.link}"
-        ><h1>"${destinations.titel}"</h1></a
+        <a href=${destinations.link}
+        ><h1>${destinations.titel}</h1></a
       >
         <p class="country">
-        <a href="${destinations.link}">"${destinations.country}"</a>
+        <a href=${destinations.link}>${destinations.country}</a>
       </p>
-        <p class="date">"${destinations.date}"</p>
+        <p class="date">${destinations.date}</p>
         <div id="divider" class="sectionDivider"></div>
         </div>`
   )
@@ -88,3 +89,17 @@ destinationContainer.innerHTML = destinations
 //   }
 // }
 // filldestinationContainer();
+
+function saveToLocalStorage() {
+  const myJsonString = JSON.stringify(destinations);
+  localStorage.setItem("Destinations", myJsonString);
+}
+
+function loadFromLocalStorage() {
+  const myJsonString = localStorage.getItem("Destinations");
+  if (myJsonString) {
+    destinations = JSON.parse(myJsonString);
+  }
+}
+
+loadFromLocalStorage();
