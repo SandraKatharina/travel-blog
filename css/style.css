@@ -8,6 +8,9 @@ a {
   text-decoration: none;
   color: darkgreen;
 }
+a:hover {
+  color: fuchsia;
+}
 
 #navigationHeader {
   display: flex;
@@ -21,11 +24,21 @@ a {
 #navigationHeader a {
   color: darkgreen;
 }
+#navigationHeader a:hover {
+  color: fuchsia;
+}
 
 .menuButton {
   background-color: transparent;
   border-style: none;
   cursor: pointer;
+}
+.size-18 {
+  width: 36px;
+  height: 36px;
+}
+.size-18:hover {
+  stroke: fuchsia;
 }
 
 #intro {
@@ -71,7 +84,7 @@ h2 {
   margin-top: 10px;
 }
 
-/* COMES FROM JS */
+/* DESTINATIONS FROM JS */
 
 .destinationContainer {
   margin: 40px auto;
@@ -101,10 +114,33 @@ h2 {
 
 /* INPUT FORM */
 
-/* aside menu */
+#h1Form {
+  margin: 40px 0 15px;
+}
+
+.inputField {
+  background-color: white;
+  border-style: none;
+  margin: 5px;
+  padding: 10px 5px 10px 5px;
+  width: 75vw;
+}
+
+.button {
+  background-color: blueviolet;
+  border-color: blueviolet;
+  margin: 15px 0 20px;
+  padding: 10px;
+  border-width: 10px;
+  border-radius: 15px;
+  color: blanchedalmond;
+  cursor: pointer;
+}
+
+/* ASIDE MENU */
 
 #aside {
-  width: 400px;
+  width: 40vw;
   height: 100vh;
   background-color: darkgreen;
   position: fixed;
@@ -112,7 +148,7 @@ h2 {
 }
 
 #aside.hidden {
-  right: -370px;
+  right: -33vw;
 }
 #asideHeader {
   display: flex;
@@ -167,7 +203,7 @@ h2 {
     margin-top: 30px;
     width: 80vw;
   }
-  /* COMES FROM JS */
+  /* DESTINATIONS FROM JS */
   .destinationContainer {
     display: flex;
     justify-content: space-around;
@@ -183,7 +219,17 @@ h2 {
     object-fit: cover;
   }
 
-  /* IMPACTS MAROCCO.HTML  */
+  /* INPUT FORM */
+
+  #h1Form {
+    width: 39vw;
+  }
+
+  .inputField {
+    width: 39vw;
+  }
+
+  /* MAROCCO.HTML  */
 
   #dividermarocco1 {
     margin-top: 30px;
@@ -216,14 +262,17 @@ h2 {
     float: left;
   }
 
-  /* ASIDE */
+  /* ASIDE MENU */
 
   #asideHeader {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 90px;
     font-size: 24px;
     color: blanchedalmond;
+  }
+  #asideMenu {
+    margin-left: 90px;
   }
 }

@@ -49,11 +49,13 @@ addButton.addEventListener("click", function () {
 
 // Functions
 
-const destinationContainer = document.querySelector(".destinationContainer");
+function filldestinationContainer() {
+  const destinationContainer = document.querySelector(".destinationContainer");
+  destinationContainer.innerHtml = "";
 
-destinationContainer.innerHTML = destinations
-  .map(
-    (destinations) => ` <div class="destination">
+  destinationContainer.innerHTML = destinations
+    .map(
+      (destinations) => ` <div class="destination">
         <a href=${destinations.link}
         ><img
           id="imgHigh"
@@ -69,35 +71,10 @@ destinationContainer.innerHTML = destinations
         <p class="date">${destinations.date}</p>
         <div id="divider" class="sectionDivider"></div>
         </div>`
-  )
-  .join("");
-
-// function filldestinationContainer() {
-//   const destinationContainer = document.querySelector(".destinationContainer");
-
-//   destinationContainer.innerHtml = "";
-//   for (let i = 0; i < destinations.length; i++) {
-//     const newDestination = `<div class="destination">
-//     <a href=${destinations[i].link}
-//     ><img
-//       id="imgHigh"
-//       src=${destinations[i].imageSrc}
-//       alt="Boucharouite closeup"
-//   /></a>
-//     <a href=${destinations[i].link}
-//     ><h1>${destinations[i].titel}</h1></a
-//   >
-//     <p class="country">
-//     <a href=${destinations[i].link}>${destinations[i].country}</a>
-//   </p>
-//     <p class="date">${destinations[i].date}</p>
-//     <div id="divider" class="sectionDivider"></div>
-//     </div>`;
-//     console.log(newDestination);
-//     destinationContainer.innerHtml += newDestination;
-//   }
-// }
-// filldestinationContainer();
+    )
+    .join("");
+}
+filldestinationContainer();
 
 function saveToLocalStorage() {
   const myJsonString = JSON.stringify(destinations);
@@ -112,6 +89,7 @@ function loadFromLocalStorage() {
 }
 
 loadFromLocalStorage();
+filldestinationContainer();
 
 // const localWeather = document.querySelector(".weatherApi");
 // fetch(
