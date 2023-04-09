@@ -42,8 +42,9 @@ addButton.addEventListener("click", function () {
     country: inputCountry.value,
     date: inputDate.value,
   };
-  console.log(newDestination);
+
   destinations.push(newDestination);
+  filldestinationContainer();
   saveToLocalStorage();
 });
 
@@ -58,7 +59,6 @@ function filldestinationContainer() {
       (destinations) => ` <div class="destination">
         <a href=${destinations.link}
         ><img
-          id="imgHigh"
           src=${destinations.imageSrc}
           alt="Boucharouite closeup"
       /></a>
@@ -69,7 +69,7 @@ function filldestinationContainer() {
         <a href=${destinations.link}>${destinations.country}</a>
       </p>
         <p class="date">${destinations.date}</p>
-        <div id="divider" class="sectionDivider"></div>
+
         </div>`
     )
     .join("");

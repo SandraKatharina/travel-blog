@@ -64,24 +64,12 @@ h2 {
   font-size: 20px;
 }
 
-.sectionDivider {
-  height: 2px;
-  width: 80vw;
-  background-color: black;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-#divider1 {
-  margin-top: 30px;
-}
-#dividerTitle {
-  height: 40px;
-  width: 80vw;
+.sectionDividerTitle {
   margin-top: 30px;
   text-align: center;
-}
-#divider2 {
-  margin-top: 10px;
+  padding: 25px 0 25px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 /* DESTINATIONS FROM JS */
@@ -90,13 +78,18 @@ h2 {
   margin: 40px auto;
 }
 .destination {
-  width: 80vw;
-  margin: 20px auto;
+  width: 250px;
+  height: 500px;
+  overflow: scroll;
+  padding: 20px;
+  background-color: blanchedalmond;
+  border-bottom: black solid 2px;
 }
 .destination img {
   display: block;
   margin: 0 auto;
-  width: 80vw;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
 .country {
@@ -115,7 +108,7 @@ h2 {
 /* INPUT FORM */
 
 #h1Form {
-  margin: 40px 0 15px;
+  margin: 60px 0 15px;
 }
 
 .inputField {
@@ -135,6 +128,34 @@ h2 {
   border-radius: 15px;
   color: blanchedalmond;
   cursor: pointer;
+}
+.button:hover {
+  background-color: fuchsia;
+  border-color: fuchsia;
+}
+
+/* ABOUT.HTML  */
+
+.detailPageContainer {
+  display: flex;
+}
+
+.detailPage {
+  width: 80vw;
+  background-color: blanchedalmond;
+}
+
+.detailPage img {
+  display: block;
+  margin: 20px 0 0 0;
+  width: 80vw;
+  object-fit: cover;
+}
+
+.moreInfo {
+  margin: 40px;
+  font-size: 16px;
+  width: 65vw;
 }
 
 /* ASIDE MENU */
@@ -195,27 +216,29 @@ h2 {
     width: 83vw;
   }
 
-  #divider1 {
-    margin-top: 30px;
-    width: 80vw;
-  }
-  #divider2 {
-    margin-top: 30px;
-    width: 80vw;
-  }
   /* DESTINATIONS FROM JS */
+
   .destinationContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    margin: 40px auto;
+    gap: 20px;
   }
   .destination {
-    width: 39vw;
+    width: 250px;
+    height: 500px;
+    overflow: scroll;
+    padding: 20px;
+    background-color: blanchedalmond;
+    border-bottom: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
   }
   .destination img {
     display: block;
     margin: 0 auto;
-    width: 39vw;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
   }
 
@@ -229,36 +252,24 @@ h2 {
     width: 39vw;
   }
 
-  /* MAROCCO.HTML  */
+  /* ABOUT.HTML  */
 
-  #dividermarocco1 {
-    margin-top: 30px;
-    width: 80vw;
-  }
-  #dividermarocco2 {
-    margin-top: 30px;
-    width: 80vw;
-  }
-  .sectionDivider {
-    width: 39vw;
-  }
-
-  #sectionContent {
+  .detailPageContainer {
     display: flex;
-    justify-content: space-around;
   }
 
-  .contentItemAll {
-    width: 39vw;
-  }
-  .contentItemAllInfo {
-    width: 39vw;
+  .detailPage {
+    width: 80vw;
+    padding: 20px;
+    background-color: blanchedalmond;
   }
 
-  #imgHigh {
-    width: 39vw;
-  }
-  .floatLeft {
+  .detailPage img {
+    display: block;
+    margin: 0 20px 0 0;
+    height: 500px;
+    width: auto;
+    object-fit: cover;
     float: left;
   }
 
