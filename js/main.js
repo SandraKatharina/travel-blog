@@ -19,6 +19,7 @@ let destinations = [
       "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-closeup.jpg",
     titel: "Marrakech–– most beautiful traditional way of Upcycling",
     link: "http://127.0.0.1:5500/travel-blog/marocco.html",
+    city: "Marrakech",
     country: "Marocco",
     date: "march 2018",
   },
@@ -26,7 +27,7 @@ let destinations = [
     imageSrc:
       "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-bistro-detail.jpg",
     titel: "Paris–– colorful patters at Paris Deco Off",
-    location: "Paris",
+    city: "Paris",
     country: "France",
     date: "january 2019",
   },
@@ -38,7 +39,7 @@ addButton.addEventListener("click", function () {
   const newDestination = {
     imageSrc: imageInput.value,
     titel: inputTitle.value,
-    location: inputCity.value,
+    city: inputCity.value,
     country: inputCountry.value,
     date: inputDate.value,
   };
@@ -91,9 +92,22 @@ function loadFromLocalStorage() {
 loadFromLocalStorage();
 filldestinationContainer();
 
+function deleteFromLocalStorage() {
+  localStorage.removeItem("Destinations");
+}
+
+// WEATHER API
+
+const weatherBox = document.querySelector("#weatherBox");
+
+for (let i = 0; i < destinations.length; i++) {
+  const cityAI = destinations[i].city;
+  console.log(cityAI);
+}
+
 // const localWeather = document.querySelector(".weatherApi");
 // fetch(
-//   "https://api.openweathermap.org/data/2.5/weather?q=Paris,FR&appid={4d52d38088073627a3b3628993c298c0}"
+//   "https://api.openweathermap.org/data/2.5/weather?q=Paris,FR&appid=4d52d38088073627a3b3628993c298c0"
 // )
 //   .then((response) => response.json())
 //   .then((data) => {
@@ -104,7 +118,7 @@ filldestinationContainer();
 //   });
 
 // function weatherBalloon(cityID) {
-//   var key = "{4d52d38088073627a3b3628993c298c0}";
+//   var key = "4d52d38088073627a3b3628993c298c0";
 //   fetch(
 //     "https://api.openweathermap.org/data/2.5/weather?id=" +
 //       cityID +

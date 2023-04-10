@@ -38,6 +38,17 @@
           <p>discover destinations</p>
       </section>
       <div class="destinationContainer"></div>
+      <section class="sectionDividerTitle">
+          <p>destinations details</p>
+      </section>
+      <div id="destinationDetailContainer">
+        <div id="destinationsBox">
+          <div id="leftContainer"></div>
+        </div>
+        <div id="weatherBox">
+          <div id="rightContainer"></div>
+        </div>
+      </div>
       <section>
         <form>
           <h1 id="h1Form" class="sectionDividerTitle">Add a new destination</h1>
@@ -78,6 +89,20 @@
           <br />
           <button type="button" id="addButton" class="button">
             ADD DESTINATION
+          </button>
+        </form>
+        <form>
+          <h1 id="h1Form" class="sectionDividerTitle">Delete a destination</h1>
+          <input
+            type="text"
+            placeholder="City"
+            id="imageInput"
+            class="inputField"
+          />
+          <br />
+          
+          <button type="button" id="addButton" class="button">
+            DELETE DESTINATION
           </button>
         </form>
       </section>

@@ -105,6 +105,15 @@ h2 {
   font-family: futura-book;
 }
 
+/* DESTINATION DETAILS */
+
+#destinationDetailContainer {
+  width: 80vw;
+  min-height: 500px;
+  background-color: white;
+  margin: 40px auto 0;
+}
+
 /* INPUT FORM */
 
 #h1Form {
