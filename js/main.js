@@ -110,6 +110,20 @@ for (let i = 0; i < destinations.length; i++) {
   });
 }
 
+function getWeatherData(cityName) {
+  const apiKey = "4d52d38088073627a3b3628993c298c0";
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+
+  fetch(URL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (result) {
+      console.log(result);
+      weatherBox.innerHTML = `The weather in ${cityName} is ${result.main.temp}`;
+    });
+}
+
 // const localWeather = document.querySelector(".weatherApi");
 // fetch(
 //   "https://api.openweathermap.org/data/2.5/weather?q=Paris,FR&appid=4d52d38088073627a3b3628993c298c0"
