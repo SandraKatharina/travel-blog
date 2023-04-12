@@ -16,7 +16,7 @@ function filldestinationContainer() {
           src=${destinations.imageSrc}
         
       /></a>
-        <a
+        <a href="http://127.0.0.1:5500/travel-blog/index.html#destinationDetails"
         ><h1>${destinations.location}</h1></a
       >
         <p class="country">
@@ -67,7 +67,11 @@ function updateListeners() {
     destinationCards[i].addEventListener("click", function () {
       getWeatherData(cityName);
       // alert(currentDestination);
-      destinationsBox.innerHTML = `<p>${currentDestination.location}</p><h2>${currentDestination.titel}</h2>`;
+      destinationsBox.innerHTML = `
+      <div><img
+        src=${currentDestination.detailImageSrc}
+    /></div>`;
+      destinationsTitelBox.innerHTML = `<h1>${currentDestination.location}</h1><h2>${currentDestination.titel}</h2>`;
     });
   }
 }
@@ -82,7 +86,7 @@ function getWeatherData(cityName) {
     })
     .then(function (result) {
       console.log(result);
-      weatherBox.innerHTML = `The weather in ${cityName} is ${result.main.temp}`;
+      weatherBox.innerHTML = `<h1>The temperature in ${cityName} is ${result.main.temp} degrees Celsius</h1>`;
     });
 }
 
@@ -107,7 +111,9 @@ let destinations = [
   {
     imageSrc:
       "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-closeup.jpg",
-    titel: "Marrakech–– most beautiful traditional way of Upcycling",
+    detailImageSrc:
+      "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-window.jpg",
+    titel: "–– most beautiful traditional way of Upcycling",
     location: "Marrakech",
     country: "Marocco",
     date: "march 2018",
@@ -115,7 +121,9 @@ let destinations = [
   {
     imageSrc:
       "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-bistro-detail.jpg",
-    titel: "Paris–– colorful patters at Paris Deco Off",
+    detailImageSrc:
+      "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-fornasetti.jpg",
+    titel: "–– colorful patters at Paris Deco Off",
     location: "Paris",
     country: "France",
     date: "january 2019",
@@ -144,6 +152,7 @@ addButton.addEventListener("click", function () {
 // Helder: moved weatherBox here, so it can be accessed in all functions
 const weatherBox = document.querySelector("#weatherBox");
 const destinationsBox = document.querySelector("#destinationsBox");
+const destinationsTitelBox = document.querySelector("#destinationsTitelBox");
 
 // APPLICATION START
 loadFromLocalStorage();

@@ -7,6 +7,7 @@ body {
 a {
   text-decoration: none;
   color: darkgreen;
+  cursor: pointer;
 }
 a:hover {
   color: fuchsia;
@@ -112,14 +113,21 @@ h2 {
   justify-content: space-around;
   width: 80vw;
   min-height: 500px;
-  background-color: white;
+  background-color: blanchedalmond;
   margin: 40px auto 0;
 }
 
-.detailBox {
+.detailBoxL {
   width: 39vw;
   height: 500px;
-  background-color: blue;
+  background-color: blanchedalmond;
+}
+
+.detailBoxS {
+  width: 25vw;
+  height: 150px;
+  background-color: white;
+  margin: 20px auto;
 }
 
 /* INPUT FORM */
@@ -266,14 +274,21 @@ h2 {
     justify-content: space-around;
     width: 80vw;
     min-height: 500px;
-    background-color: white;
+    background-color: blanchedalmond;
     margin: 40px auto 0;
   }
 
-  .detailBox {
+  .detailBoxL {
     width: 39vw;
     height: 500px;
-    background-color: blue;
+    background-color: blanchedalmond;
+  }
+  .detailBoxL img {
+    display: block;
+    width: 35vw;
+    max-height: 500px;
+    object-fit: cover;
+    margin: auto;
   }
 
   /* INPUT FORM */
