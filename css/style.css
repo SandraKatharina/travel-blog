@@ -107,11 +107,19 @@ h2 {
 
 /* DESTINATION DETAILS */
 
-#destinationDetailContainer {
+.destinationDetailContainer {
+  display: flex;
+  justify-content: space-around;
   width: 80vw;
   min-height: 500px;
   background-color: white;
   margin: 40px auto 0;
+}
+
+.detailBox {
+  width: 39vw;
+  height: 500px;
+  background-color: blue;
 }
 
 /* INPUT FORM */
@@ -249,6 +257,23 @@ h2 {
     width: 250px;
     height: 250px;
     object-fit: cover;
+  }
+
+  /* DESTINATION DETAILS */
+
+  .destinationDetailContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    min-height: 500px;
+    background-color: white;
+    margin: 40px auto 0;
+  }
+
+  .detailBox {
+    width: 39vw;
+    height: 500px;
+    background-color: blue;
   }
 
   /* INPUT FORM */
