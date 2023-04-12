@@ -58,7 +58,7 @@ a:hover {
 
 h1 {
   font-size: 36px;
-  margin-top: 20px;
+  padding-top: 10px;
 }
 
 h2 {
@@ -66,7 +66,7 @@ h2 {
 }
 
 .sectionDividerTitle {
-  margin-top: 30px;
+  margin-top: 100px;
   text-align: center;
   padding: 25px 0 25px;
   border-top: 2px solid black;
@@ -80,8 +80,7 @@ h2 {
 }
 .destination {
   width: 250px;
-  height: 500px;
-  overflow: scroll;
+  height: 350px;
   padding: 20px;
   background-color: blanchedalmond;
   border-bottom: black solid 2px;
@@ -109,8 +108,6 @@ h2 {
 /* DESTINATION DETAILS */
 
 .destinationDetailContainer {
-  display: flex;
-  justify-content: space-around;
   width: 80vw;
   min-height: 500px;
   background-color: blanchedalmond;
@@ -118,22 +115,48 @@ h2 {
 }
 
 .detailBoxL {
-  width: 39vw;
+  width: 80vw;
   height: 500px;
   background-color: blanchedalmond;
 }
 
+.detailBoxL img {
+  display: block;
+  width: 80vw;
+  object-fit: cover;
+  margin: auto;
+}
+
 .detailBoxS {
-  width: 25vw;
+  width: 75vw;
   height: 150px;
+  margin: 10px auto;
+}
+
+#destinationsTitleBox {
+  background-color: blanchedalmond;
+  height: 300px;
+  overflow: scroll;
+}
+#descriptionP {
+  font-size: 16px;
+  margin: 30px 0 0;
+  width: 65vw;
+}
+
+#weatherBox {
   background-color: white;
-  margin: 20px auto;
+}
+
+#weatherBox h1 {
+  padding: 10px;
+  text-align: center;
 }
 
 /* INPUT FORM */
 
 #h1Form {
-  margin: 60px 0 15px;
+  margin: 100px 0 15px;
 }
 
 .inputField {
@@ -249,23 +272,6 @@ h2 {
     justify-content: space-around;
     gap: 20px;
   }
-  .destination {
-    width: 250px;
-    height: 500px;
-    overflow: scroll;
-    padding: 20px;
-    background-color: blanchedalmond;
-    border-bottom: 2px;
-    border-bottom-color: black;
-    border-bottom-style: solid;
-  }
-  .destination img {
-    display: block;
-    margin: 0 auto;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-  }
 
   /* DESTINATION DETAILS */
 
@@ -289,6 +295,12 @@ h2 {
     max-height: 500px;
     object-fit: cover;
     margin: auto;
+  }
+  .detailBoxS {
+    width: 25vw;
+  }
+  #descriptionP {
+    width: 25vw;
   }
 
   /* INPUT FORM */

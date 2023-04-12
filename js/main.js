@@ -71,7 +71,9 @@ function updateListeners() {
       <div><img
         src=${currentDestination.detailImageSrc}
     /></div>`;
-      destinationsTitelBox.innerHTML = `<h1>${currentDestination.location}</h1><h2>${currentDestination.titel}</h2>`;
+      destinationsTitelBox.innerHTML = `<h1>${currentDestination.location}</h1>
+      <h2>${currentDestination.titel}</h2>
+      <p id="descriptionP">${currentDestination.description}`;
     });
   }
 }
@@ -115,6 +117,8 @@ let destinations = [
       "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-window.jpg",
     titel: "–– most beautiful traditional way of Upcycling",
     location: "Marrakech",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi modi porro cumque necessitatibus consectetur quaeratb landitiis est odio recusandae nam deserunt omnis quisquam dolorum adlabore nisi molestias, eum soluta.",
     country: "Marocco",
     date: "march 2018",
   },
@@ -125,6 +129,8 @@ let destinations = [
       "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-fornasetti.jpg",
     titel: "–– colorful patters at Paris Deco Off",
     location: "Paris",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi modi porro cumque necessitatibus consectetur quaeratb landitiis est odio recusandae nam deserunt omnis quisquam dolorum adlabore nisi molestias, eum soluta.",
     country: "France",
     date: "january 2019",
   },
@@ -137,6 +143,7 @@ addButton.addEventListener("click", function () {
     imageSrc: imageInput.value,
     titel: inputTitle.value,
     location: inputCity.value,
+    description: inputDescription.value,
     country: inputCountry.value,
     date: inputDate.value,
   };
