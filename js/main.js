@@ -11,7 +11,7 @@ function filldestinationContainer() {
       (
         destinations
       ) => ` <div class="destination" data-city="${destinations.location}">
-        <a
+        <a href="http://127.0.0.1:5500/travel-blog/index.html#destinationDetails"
         ><img
           src=${destinations.imageSrc}
         
@@ -41,10 +41,6 @@ function loadFromLocalStorage() {
   }
 }
 
-function deleteFromLocalStorage() {
-  localStorage.removeItem("Destinations");
-}
-
 // WEATHER API
 
 function updateListeners() {
@@ -69,7 +65,7 @@ function updateListeners() {
       // alert(currentDestination);
       destinationsBox.innerHTML = `
       <div><img
-        src=${currentDestination.detailImageSrc}
+        src=${currentDestination.imageSrc}
     /></div>`;
       destinationsTitelBox.innerHTML = `<h1>${currentDestination.location}</h1>
       <h2>${currentDestination.titel}</h2>
@@ -113,20 +109,20 @@ let destinations = [
   {
     imageSrc:
       "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-closeup.jpg",
-    detailImageSrc:
-      "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-window.jpg",
+    // detailImageSrc:
+    //   "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-window.jpg",
     titel: "–– most beautiful traditional way of Upcycling",
     location: "Marrakech",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi modi porro cumque necessitatibus consectetur quaeratb landitiis est odio recusandae nam deserunt omnis quisquam dolorum adlabore nisi molestias, eum soluta.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi modi porro cumque necessitatibus consectetur quaeratb landitiis est odio recusandae nam deserunt omnis quisquam dolorum adlabore nisi molestias, eum soluta.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi modi porro cumque necessitatibus consectetur quaeratb landitiis est odio recusandae nam deserunt omnis quisquam dolorum adlabore nisi molestias, eum soluta.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi modi porro cumque necessitatibus consectetur quaeratb landitiis est odio recusandae nam deserunt omnis quisquam dolorum adlabore nisi molestias, eum soluta.",
     country: "Marocco",
     date: "march 2018",
   },
   {
     imageSrc:
       "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-bistro-detail.jpg",
-    detailImageSrc:
-      "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-fornasetti.jpg",
+    // detailImageSrc:
+    //   "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-fornasetti.jpg",
     titel: "–– colorful patters at Paris Deco Off",
     location: "Paris",
     description:
@@ -156,6 +152,18 @@ addButton.addEventListener("click", function () {
   updateListeners();
 });
 
+function deleteLastDestination() {
+  destinations.pop();
+  saveToLocalStorage();
+}
+
+deleteButton.addEventListener("click", function () {
+  deleteLastDestination();
+  saveToLocalStorage();
+  // filldestinationContainer();
+  location.reload();
+});
+
 // Helder: moved weatherBox here, so it can be accessed in all functions
 const weatherBox = document.querySelector("#weatherBox");
 const destinationsBox = document.querySelector("#destinationsBox");
@@ -165,40 +173,6 @@ const destinationsTitelBox = document.querySelector("#destinationsTitelBox");
 loadFromLocalStorage();
 filldestinationContainer();
 updateListeners();
-
-// const buttonShowMenu = document.getElementById("buttonShowMenu");
-// const buttonHideMenu = document.getElementById("buttonHideMenu");
-
-// const aside = document.getElementById("aside");
-
-// buttonShowMenu.addEventListener("click", function () {
-//   aside.classList.remove("hidden");
-// });
-
-// buttonHideMenu.addEventListener("click", function () {
-//   aside.classList.add("hidden");
-// });
-
-// // Original Array
-
-// let destinations = [
-//   {
-//     imageSrc:
-//       "http://127.0.0.1:5500/travel-blog/img/marocco-marrakech-boucharouite-closeup.jpg",
-//     titel: "Marrakech–– most beautiful traditional way of Upcycling",
-//     location: "Marrakech",
-//     country: "Marocco",
-//     date: "march 2018",
-//   },
-//   {
-//     imageSrc:
-//       "http://127.0.0.1:5500/travel-blog/img/france-paris-deco-off-bistro-detail.jpg",
-//     titel: "Paris–– colorful patters at Paris Deco Off",
-//     location: "Paris",
-//     country: "France",
-//     date: "january 2019",
-//   },
-// ];
 
 // // Event Listeners
 
@@ -303,26 +277,3 @@ updateListeners();
 //       .map((location) => `<li>${location.q}</li>`)
 //       .join("");
 //   });
-
-// function weatherBalloon(cityID) {
-//   var key = "4d52d38088073627a3b3628993c298c0";
-//   fetch(
-//     "https://api.openweathermap.org/data/2.5/weather?id=" +
-//       cityID +
-//       "&appid=" +
-//       key
-//   )
-//     .then(function (resp) {
-//       return resp.json();
-//     }) // Convert data to json
-//     .then(function (data) {
-//       console.log(data);
-//     })
-//     .catch(function () {
-//       // catch any errors
-//     });
-// }
-
-// window.onload = function () {
-//   weatherBalloon(cityAI);
-// };
