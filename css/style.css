@@ -247,6 +247,9 @@ h2 {
 #asideMenu a {
   color: blanchedalmond;
 }
+#asideMenu a:hover {
+  color: fuchsia;
+}
 
 /*DESKTOP starts at 900 px*/
 
