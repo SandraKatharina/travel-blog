@@ -4,7 +4,7 @@
 
 The goal for this project is to build a Travel Blog with HTML, CSS, and JS.
 
-Features
+<h3>Features</h3>
 
 Homepage
 
